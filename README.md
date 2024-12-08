@@ -1,61 +1,192 @@
-├── LICENSE
-├── README.md          <- The top-level README for developers using this project.
-├── adhoc              <- Ad-hoc scripts
-│
-├── config             <- Configuration files
-│
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── datamart        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
-│   │
-│   ├── data_processor           <- Scripts to process data
-│   │   └── make_dataset.py
-│   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
-│   │   └── build_features.py
-│   │
-│   ├── models         <- Scripts to train models and then use trained models to make
-│   │   │                 predictions
-│   │   ├── base  <- Definition of abstract classes
-│   │   │   ├── __init__.py
-│   │   │   ├── model.py
-│   │   │   └── preprocess.py
-│   │   ├── lightgbm  <- Model logic (preprocessing, prediction, etc.)
-│   │   │   ├── __init__.py
-│   │   │   ├── model.py
-│   │   │   └── preprocess.py
-│   │
-│   └── optimizer      <- Scripts to optimize models
-│   │   ├── base
-│   │   │   ├── __init__.py
-│   │   │   ├── model.py
-│   │   │   └── preprocess.py
-│   │   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-│   │   └── visualize.py
-│   └── utils          <- Utility scripts
-│       └── __init__.py
-│
-└── uv.lock            <- Lock file for uv
-│
-└── pyproject.toml     <- Configuration file for uv
-│
-└── .python-version    <- Python version
+├── .
+│   └── run.py
+│   └── .DS_Store
+│   └── pyproject.toml
+│   └── README.md
+│   └── .gitignore
+│   ├── references
+│   ├── models
+│   ├── adhoc
+│   ├── configs
+│   ├── .venv
+│   ├── .vscode
+│   ├── data
+│   ├── notebooks
+│   ├── reports
+│   ├── src
+  ├── references
+  ├── models
+  ├── adhoc
+  │   └── eda.py
+  ├── configs
+  │   └── default.json
+  ├── .venv
+  │   └── .lock
+  │   └── pyvenv.cfg
+  │   └── CACHEDIR.TAG
+  │   └── .gitignore
+  │   └── LICENSE.txt
+  │   ├── bin
+  │   ├── etc
+  │   ├── lib
+  │   ├── share
+    ├── bin
+    │   └── ruff
+    │   └── activate.bat
+    │   └── pyftsubset
+    │   └── jupyter-run
+    │   └── pyjson5
+    │   └── jupyter-labextension
+    │   └── activate.ps1
+    │   └── python3
+    │   └── pybabel
+    │   └── jlpm
+    │   └── ttx
+    │   └── python
+    │   └── debugpy
+    │   └── ipython
+    │   └── jupyter-notebook
+    │   └── activate.fish
+    │   └── send2trash
+    │   └── fonttools
+    │   └── mako-render
+    │   └── pydoc.bat
+    │   └── jupyter-labhub
+    │   └── jupyter-server
+    │   └── python3.10
+    │   └── jupyter-dejavu
+    │   └── activate_this.py
+    │   └── f2py
+    │   └── ipython3
+    │   └── httpx
+    │   └── jupyter-nbconvert
+    │   └── jupyter-lab
+    │   └── jsonschema
+    │   └── wsdump
+    │   └── tqdm
+    │   └── optuna
+    │   └── jupyter-troubleshoot
+    │   └── pygmentize
+    │   └── jupyter-migrate
+    │   └── alembic
+    │   └── activate
+    │   └── jupyter-console
+    │   └── jupyter-events
+    │   └── activate.nu
+    │   └── normalizer
+    │   └── jupyter-trust
+    │   └── jsonpointer
+    │   └── deactivate.bat
+    │   └── jupyter-kernelspec
+    │   └── jupyter-kernel
+    │   └── jupyter
+    │   └── pyftmerge
+    │   └── jupyter-execute
+    │   └── activate.csh
+    ├── etc
+    │   ├── jupyter
+      ├── jupyter
+      │   ├── nbconfig
+      │   ├── jupyter_server_config.d
+      │   ├── jupyter_notebook_config.d
+    ├── lib
+    │   ├── python3.10
+      ├── python3.10
+      │   ├── site-packages
+    ├── share
+    │   ├── man
+    │   ├── icons
+    │   ├── applications
+    │   ├── jupyter
+      ├── man
+      │   ├── man1
+      ├── icons
+      │   ├── hicolor
+      ├── applications
+      │   └── jupyterlab.desktop
+      │   └── jupyter-notebook.desktop
+      ├── jupyter
+      │   ├── labextensions
+      │   ├── kernels
+      │   ├── lab
+      │   ├── nbextensions
+      │   ├── nbconvert
+  ├── .vscode
+  │   └── task.json
+  ├── data
+  │   └── .DS_Store
+  │   ├── datamart
+  │   ├── external
+  │   ├── processed
+  │   ├── raw
+    ├── datamart
+    ├── external
+    ├── processed
+    ├── raw
+    │   └── test.csv
+    │   └── train.csv
+    │   └── gender_submission.csv
+  ├── notebooks
+  │   └── eda.ipynb
+  │   ├── catboost_info
+    ├── catboost_info
+    │   └── learn_error.tsv
+    │   └── test_error.tsv
+    │   └── time_left.tsv
+    │   └── catboost_training.json
+    │   ├── learn
+    │   ├── test
+    │   ├── tmp
+      ├── learn
+      │   └── events.out.tfevents
+      ├── test
+      │   └── events.out.tfevents
+      ├── tmp
+  ├── reports
+  │   ├── figures
+    ├── figures
+  ├── src
+  │   └── __init__.py
+  │   ├── visualization
+  │   ├── optimizer
+  │   ├── utils
+  │   ├── models
+  │   ├── data_processor
+    ├── visualization
+    │   └── visualize.py
+    ├── optimizer
+    │   └── lightgbm.py
+    │   └── catboost.py
+    │   └── __init__.py
+    │   └── xgboost.py
+    │   └── base.py
+    ├── utils
+    │   └── __init__.py
+    │   └── logger.py
+    │   └── generate_tree_info.py
+    ├── models
+    │   └── train_model.py
+    │   └── predict_model.py
+    │   ├── xgboost
+    │   ├── lightgbm
+    │   ├── base
+    │   ├── catboost
+      ├── xgboost
+      │   └── preprocess.py
+      │   └── __init__.py
+      │   └── model.py
+      ├── lightgbm
+      │   └── preprocess.py
+      │   └── __init__.py
+      │   └── model.py
+      ├── base
+      │   └── __init__.py
+      │   └── model.py
+      ├── catboost
+      │   └── preprocess.py
+      │   └── __init__.py
+      │   └── model.py
+    ├── data_processor
+    │   └── __init__.py
+    │   └── process.py
+    │   └── schema.py
