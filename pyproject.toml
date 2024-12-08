@@ -1,0 +1,57 @@
+[project]
+name = "xxx"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "catboost>=1.2.7",
+    "jupyter>=1.1.1",
+    "lightgbm>=4.5.0",
+    "matplotlib>=3.9.3",
+    "optuna>=4.1.0",
+    "pandera>=0.21.1",
+    "polars>=1.16.0",
+    "pyarrow>=18.1.0",
+    "ruff>=0.8.2",
+    "scikit-learn>=1.5.2",
+    "xgboost>=2.1.3",
+]
+
+[tool.ruff]
+# Enable notebook checking
+extend-include = ["*.ipynb"]
+# Line length and other common settings
+line-length = 88
+indent-width = 4
+
+# Ignore common notebook-related issues
+[tool.ruff.lint]
+ignore = [
+    "E402",  # Module level import not at top of file
+    "F401",  # Unused imports (common in notebooks for exploration)
+    "E501",  # Line too long (common in notebook outputs)
+]
+
+# Select which rules to enable
+select = [
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "I",  # isort
+    "W",  # pycodestyle warnings
+]
+
+[tool.ruff.per-file-ignores]
+"*.ipynb" = [
+    "E402",  # Module level import not at top of file
+    "F401",  # Unused imports
+    "E501",  # Line too long
+    "I001",
+]
+
+# for isort
+[tool.ruff.isort]
+combine-as-imports = true
+known-first-party = ["src"]
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+split-on-trailing-comma = true

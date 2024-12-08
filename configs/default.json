@@ -1,0 +1,27 @@
+{
+    "features": [
+        "Pclass",
+        "Sex",
+        "Age",
+        "SibSp",
+        "Parch",
+        "Fare",
+        "Embarked"
+    ],
+    "default_lgbm_params": {
+        "objective": "binary",
+        "metric": "binary_logloss",
+        "boosting_type": "gbdt",
+        "verbose": -1
+    },
+    "default_xgb_params": {
+        "objective": "binary:logistic"
+    },
+    "default_catboost_params": {
+        "loss_function": "Logloss",
+        "eval_metric": "Accuracy",
+        "random_seed": 42,
+        "early_stopping_rounds": 100,
+        "verbose": false
+    }
+}
