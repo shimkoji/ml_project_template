@@ -1,10 +1,10 @@
 # files under ./data
-data/*/*.feather
-data/*/*.csv
-data/*/*.tsv
-data/*/*.zip
-features/*.feather
-features/importances/*.png
+# data/*/*.feather
+# data/*/*.csv
+# data/*/*.tsv
+# data/*/*.zip
+# features/*.feather
+# features/importances/*.png
 
 # Created by https://www.gitignore.io/api/macos,python,jupyternotebook
 # Edit at https://www.gitignore.io/?templates=macos,python,jupyternotebook
